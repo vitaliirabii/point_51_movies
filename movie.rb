@@ -6,14 +6,14 @@ class Movie
   end
 
   def ask_producer
-    puts "Write a name of producer"
+    puts "Фильмы какого режиссера Вы хотите посмотреть?"
     @producer_name = STDIN.gets.encode('UTF-8').chomp
   end
 
   def ask_movies
   	movies_arr = []
     while @movie_name != "" do
-      puts "Write a next movie or write \"\" (nothing)"
+      puts "Введите какой-нибудь его хороший фильм или \'\'"
       @movie_name = STDIN.gets.encode('UTF-8').chomp
       movies_arr << @movie_name
     end
@@ -21,7 +21,7 @@ class Movie
   end
 
   def random_movie(movies_array)
-    puts "Tooday you will watch: #{movies_array.sample} by producer: #{@producer_name}"
+    puts "И сегодня вечером рекомендую посмотреть: #{movies_array.sample} режиссера: #{@producer_name}"
   end
 
 end
